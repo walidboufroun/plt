@@ -43,7 +43,8 @@ class EmployeeControllerClient extends Controller
             dd($request->file('photo'));
         }
         $file = $request->file('photo');
-        $fileName = time() . '_' . $file->getClientOriginalName();
+        //$fileName = time() . '_' . $file->getClientOriginalName();
+        $filename= 'aaa.jpg';
         $file->storeAs('images/client', $fileName);
 
         return redirect()->route('Client-Employes');

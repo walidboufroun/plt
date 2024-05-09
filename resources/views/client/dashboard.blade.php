@@ -41,7 +41,7 @@
                                 <div class="ps-3">
                                     <h6>145 </h6>
                                     <span class="text-success small pt-1 fw-bold">28%</span> <span
-                                        class="text-muted small pt-2 ps-1">Revenu</span>
+                                        class="text-muted small pt-2 ps-1">Global</span>
 
                                 </div>
                             </div>
@@ -74,9 +74,9 @@
                                     <i class="bi bi-file-earmark-text"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>198</h6>
                                     <span class="text-success small pt-1 fw-bold">12%</span> <span
-                                        class="text-muted small pt-2 ps-1">Revenu</span>
+                                        class="text-muted small pt-2 ps-1">Global</span>
 
                                 </div>
                             </div>
@@ -108,9 +108,9 @@
                                     <i class="bi bi-trash2"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>165</h6>
                                     <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                        class="text-muted small pt-2 ps-1">Revenu</span>
+                                        class="text-muted small pt-2 ps-1">Global</span>
 
                                 </div>
                             </div>
@@ -143,9 +143,9 @@
                                 </div>
 
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>264</h6>
                                     <span class="text-success small pt-1 fw-bold">17%</span> <span
-                                        class="text-muted small pt-2 ps-1">Revenu</span>
+                                        class="text-muted small pt-2 ps-1">Global</span>
 
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                 <div class="ps-3">
                                     <h6>1244</h6>
                                     <span class="text-danger small pt-1 fw-bold">25%</span> <span
-                                        class="text-muted small pt-2 ps-1">Revenu</span>
+                                        class="text-muted small pt-2 ps-1">Global</span>
 
                                 </div>
                             </div>

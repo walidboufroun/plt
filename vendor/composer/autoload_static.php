@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit470a050074c535cf9a1ac434ba1b6399
+class ComposerStaticInitfa3e4ca4de3d6226dbeaa2253afc4fef
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -363,8 +363,8 @@ class ComposerStaticInit470a050074c535cf9a1ac434ba1b6399
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -589,12 +589,21 @@ class ComposerStaticInit470a050074c535cf9a1ac434ba1b6399
         'App\\Http\\Controllers\\AdminControllers\\MaintenanceController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminControllers/MaintenanceController.php',
         'App\\Http\\Controllers\\AdminControllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminControllers/OrderController.php',
         'App\\Http\\Controllers\\AdminControllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminControllers/ProductController.php',
+        'App\\Http\\Controllers\\AdminControllers\\SocieteController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminControllers/SocieteController.php',
         'App\\Http\\Controllers\\AuthAdmin' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthAdmin.php',
+        'App\\Http\\Controllers\\AuthClient' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthClient.php',
         'App\\Http\\Controllers\\AuthUser' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthUser.php',
+        'App\\Http\\Controllers\\BlogControllers\\BlogContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/BlogControllers/BlogContactController.php',
+        'App\\Http\\Controllers\\ClientControllers\\AlertControllerClient' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientControllers/AlertControllerClient.php',
+        'App\\Http\\Controllers\\ClientControllers\\ComplaintControllerClient' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientControllers/ComplaintControllerClient.php',
+        'App\\Http\\Controllers\\ClientControllers\\DashboardControllerClient' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientControllers/DashboardControllerClient.php',
+        'App\\Http\\Controllers\\ClientControllers\\EmployeeControllerClient' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientControllers/EmployeeControllerClient.php',
+        'App\\Http\\Controllers\\ClientControllers\\ProductAnomalyControllerClient' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientControllers/ProductAnomalyControllerClient.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\AdminAuthenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/AdminAuthenticate.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
-        'App\\Http\\Middleware\\CheckUserType' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckUserType.php',
+        'App\\Http\\Middleware\\ClientAuthenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/ClientAuthenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -607,8 +616,10 @@ class ComposerStaticInit470a050074c535cf9a1ac434ba1b6399
         'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
         'App\\Models\\Commande' => __DIR__ . '/../..' . '/app/Models/Commande.php',
         'App\\Models\\Commentaire' => __DIR__ . '/../..' . '/app/Models/Commentaire.php',
+        'App\\Models\\Contact' => __DIR__ . '/../..' . '/app/Models/Contact.php',
         'App\\Models\\Etat' => __DIR__ . '/../..' . '/app/Models/Etat.php',
         'App\\Models\\Forfait' => __DIR__ . '/../..' . '/app/Models/Forfait.php',
+        'App\\Models\\Image' => __DIR__ . '/../..' . '/app/Models/Image.php',
         'App\\Models\\Produit' => __DIR__ . '/../..' . '/app/Models/Produit.php',
         'App\\Models\\Societe' => __DIR__ . '/../..' . '/app/Models/Societe.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -7089,9 +7100,9 @@ class ComposerStaticInit470a050074c535cf9a1ac434ba1b6399
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit470a050074c535cf9a1ac434ba1b6399::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit470a050074c535cf9a1ac434ba1b6399::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit470a050074c535cf9a1ac434ba1b6399::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitfa3e4ca4de3d6226dbeaa2253afc4fef::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitfa3e4ca4de3d6226dbeaa2253afc4fef::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitfa3e4ca4de3d6226dbeaa2253afc4fef::$classMap;
 
         }, null, ClassLoader::class);
     }
