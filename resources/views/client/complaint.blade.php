@@ -41,15 +41,7 @@
                                                     value="{{ now()->format('Y-m-d') }}" required>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
-                                            <label for="inputText" class="col-sm-2 col-form-label">Client</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="idclient" name="client" required>
-                                                    <!-- afficher directement le client en session -->
-                                                    <option value="client1">client1</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="row mb-3">
                                             <label for="inputText" class="col-sm-2 col-form-label">Nom Produit</label>
                                             <div class="col-sm-10">
@@ -79,20 +71,22 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row mb-3">
-                                            <label for="inputText" class="col-sm-2 col-form-label">statut de
-                                                réclamations</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="etatReclamation" name="statut">
-                                                    <option value="en_attente">En attente</option>
-                                                    <option value="en_cours">En cours de traitement</option>
-                                                    <option value="termine_succee">Traitement terminé avec succès</option>
-                                                    <option value="termine_probleme">Traitement terminé avec problème
-                                                    </option>
-                                                    <option value="non_applicable">Non applicable</option>
-                                                </select>
+                                        <!--
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">statut de
+                                                    réclamations</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="etatReclamation" name="statut">
+                                                        <option value="en_attente">En attente</option>
+                                                        <option value="en_cours">En cours de traitement</option>
+                                                        <option value="termine_succee">Traitement terminé avec succès</option>
+                                                        <option value="termine_probleme">Traitement terminé avec problème
+                                                        </option>
+                                                        <option value="non_applicable">Non applicable</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
+                                        -->
                                         <div class="row mb-3">
                                             <label for="inputText" class="col-sm-2 col-form-label">Actions prise</label>
                                             <div class="col-sm-10">
@@ -109,11 +103,15 @@
                             </form>
                         </div>
                     </div><!-- End Large Modal-->
+                    @if ($complaints->isNotEmpty())
+                        <div class="card-title">
+                            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#largeModal">Ajouter une réclamations</button>
+                        </div>
+                    @else
+                        <!-- Ne rien afficher si la collection de complaints est vide -->
+                    @endif
 
-                    <div class="card-title">
-                        <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
-                            data-bs-target="#largeModal">Ajouter une réclamations</button>
-                    </div>
                 </div>
 
                 <!-- Table with stripped rows -->
@@ -133,7 +131,7 @@
                     </thead>
                     <tbody>
                         @foreach ($complaints as $complaint)
-                        <tr>
+                            <tr>
                                 <td>{{ $complaint->content }}</td>
                                 <td>{{ $complaint->produit->name }}</td>
                                 <td>{{ $complaint->produit->name }}</td>
@@ -141,7 +139,7 @@
                                 <td>{{ $complaint->utilisateur->type }}</td>
                                 <td>{{ $complaint->statut }}</td>
                                 <td>{{ $complaint->utilisateur->type }}</td>
-                                <td>{{ $complaint->created_at }}</td>   
+                                <td>{{ $complaint->created_at }}</td>
                                 <td class="fix_width">
                                     <div class="modal fade" id="modifier_réclamations_{{ $complaint->id }}" tabindex="-1">
                                         <div class="modal-dialog modal-lg">3
@@ -277,7 +275,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            @endforeach 
+                        @endforeach
                     </tbody>
                 </table>
                 <!-- End Table with stripped rows -->

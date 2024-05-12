@@ -111,7 +111,7 @@
                 <thead>
                     <tr>
                         <th>nom complet</th>
-                        <th>Nom dutilisateur </th>
+                        <th>Societe </th>
                         <th>Email</th>
                         <th>Adresse</th>
                         <th>Numéro de téléphone</th>
@@ -124,7 +124,7 @@
                     @foreach ($clients as $client)
                     <tr>
                         <td>{{ $client->name }}</td>
-                        <td>{{ $client->username }}</td>
+                        <td>{{ $client->societe->name }}</td>
                         <td>{{ $client->email }}</td>
                         <td>{{ $client->adresse }}</td>
                         <td>{{ $client->phone_number }}</td>
